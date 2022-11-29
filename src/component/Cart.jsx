@@ -19,6 +19,11 @@ function Cart() {
   
             setSubTotal(total)
 
+            setGst(5)
+            if(total >= 1000) {
+                setDc(0)
+                setDiscount(10)
+            }
         }
         getTotal()
 
@@ -45,7 +50,7 @@ function Cart() {
         setCart([...cart])
     }
 
-    const updateCart = async (cart) => {}
+    // const updateCart = async (cart) => {}
 
     const delItem = (id) => {
         if(window.confirm(`DO you want to remover product?`)) {
